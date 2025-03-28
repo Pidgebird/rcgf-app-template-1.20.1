@@ -136,7 +136,10 @@ dependencies {
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 	modImplementation("dev.kosmx.player-anim:player-animation-lib-fabric:${project.player_anim}")
-	modApi "net.threetag:palladium-fabric:${project.palladium_version}"
+	modApi ("net.threetag:palladium-fabric:${project.palladium_version}"){
+		exclude group: "software.bernie.geckolib"
+	}
+
 	//modImplementation(include("io.github.fabricators_of_create.Porting-Lib:${porting_lib}"))
 
 	
