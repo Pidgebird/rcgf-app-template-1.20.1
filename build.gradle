@@ -18,9 +18,7 @@ repositories {
 	}
 
 	// ThreeTAG stuff
-	maven {
-		url 'https://maven.threetag.net'
-	}
+	maven {url 'https://maven.threetag.net'}
 
 	// CurseMaven
 	maven {
@@ -31,19 +29,13 @@ repositories {
 	}
 
 	// Trinkets
-	maven {
-		url "https://maven.terraformersmc.com/releases/"
-	}
+	maven {url "https://maven.terraformersmc.com/releases/"}
 
 	// REI
-	maven {
-		url "https://maven.shedaniel.me"
-	}
+	maven {url "https://maven.shedaniel.me"}
 
 	// JEI
-	maven {
-		url "https://dvs1.progwml6.com/files/maven/"
-	}
+	maven {url "https://dvs1.progwml6.com/files/maven/"}
 
 	// Cardinal Components
 	maven {
@@ -52,9 +44,7 @@ repositories {
 	}
 
 	// Curios
-	maven {
-		url = "https://maven.theillusivec4.top/"
-	}
+	maven {url = "https://maven.theillusivec4.top/"}
 
 	// KubeJS / Rhino
 	maven {
@@ -71,9 +61,7 @@ repositories {
 	}
 
 	// Ingredient Extension API
-	maven {
-		url = 'https://maven.blamejared.com'
-	}
+	maven {url = 'https://maven.blamejared.com'}
 
 	// Player Animator
 	maven {
@@ -88,17 +76,13 @@ repositories {
 	}
 
 	// Condensed Creative
-	maven {
-		url = 'https://maven.wispforest.io'
-	}
+	maven {url = 'https://maven.wispforest.io'}
 
 	// Porting Lib
 	maven { url = "https://mvn.devos.one/snapshots/" }
 
 	// Modrinth
-	maven {
-		url "https://api.modrinth.com/maven"
-	}
+	maven {url "https://api.modrinth.com/maven"}
 
 	maven { url 'https://jitpack.io' }
 
@@ -110,6 +94,7 @@ repositories {
 			includeGroup "com.jamieswhiteshirt"
 		}
 	}
+	maven {url 'https://maven.azuredoom.com/mods'}
 
 // Add repositories to retrieve artifacts from in here.
 	// You should only use this when depending on other mods because
@@ -139,8 +124,7 @@ dependencies {
 	modApi ("net.threetag:palladium-fabric:${project.palladium_version}"){
 		exclude group: "software.bernie.geckolib"
 	}
-
-	//modImplementation(include("io.github.fabricators_of_create.Porting-Lib:${porting_lib}"))
+	modImplementation "mod.azure.azurelib:azurelib-fabric-${project.minecraft_version}:${project.azurelib}"
 
 	
 }
